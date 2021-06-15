@@ -188,6 +188,7 @@ async function main() {
     
     let cookie = await login();
     let userInfo = await getUserInfo(cookie);
+    console.log(userInfo);
     if (!userInfo) { throw new Error('获取用户信息失败'); }
     
     info['姓名'] = userInfo['username'];
